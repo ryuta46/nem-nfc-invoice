@@ -2,12 +2,6 @@
 <manifest package="com.ryuta46.nemnfcinvoice"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- NFCを使用する為のパーミッションを付与 -->
-    <uses-permission android:name="android.permission.NFC"/>
-    <!-- Google Playで、NFCハードウェアを持つデバイスのみに制限するための   機能を定義 -->
-    <uses-feature
-        android:name="android.hardware.nfc"
-        android:required="true"/>
 
     <application
         android:allowBackup="true"

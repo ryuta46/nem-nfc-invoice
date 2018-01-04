@@ -1,14 +1,11 @@
 package com.ryuta46.nemnfcinvoice
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.TextView
-import android.R.attr.action
 import android.content.Intent
 import android.nfc.NdefMessage
 import android.nfc.NdefRecord
 import android.nfc.NfcAdapter
-import android.util.Log
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.google.gson.Gson
 import java.util.*
 
@@ -35,8 +32,6 @@ class InvoiceActivity : AppCompatActivity() {
                 .putExtra(EXTRA_BOOL_ENCRYPTED, true)
         startActivity(intent)
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
