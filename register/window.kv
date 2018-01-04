@@ -1,0 +1,52 @@
+
+MainWidget:
+
+<MyInput@TextInput>:
+    size_hint_x: 4
+    padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+    multiline: False
+
+
+<MainWidget>:
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 5
+
+            spacing: 30
+            padding: 10
+
+            BoxLayout:
+                Label:
+                    text: 'Address'
+
+                MyInput:
+                    id: address_input
+                    text: root.address
+                    on_text: root.address = self.text
+
+            BoxLayout:
+                Label:
+                    text: 'Amount'
+
+                MyInput:
+                    id: amount_input
+                    text: root.amount
+                    on_text: root.amount = self.text
+
+            BoxLayout:
+                Label:
+                    text: 'Message'
+
+                MyInput:
+                    id: message_input
+                    text: root.message
+                    on_text: root.message = self.text
+
+        Button:
+            id: button1
+            text: "OK"
+            size_hint_y: 1
+            on_press: root.button_clicked()
